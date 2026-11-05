@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-heading"><div><h2>Your financial overview</h2><p>Here’s what’s happening with your money this month.</p></div><div class="heading-actions"><input class="month-input" type="month" id="monthSelector"><button class="btn btn-primary" data-add-transaction>＋ Add transaction</button></div></div>
+<div class="stat-grid">
+  <article class="stat-card"><div class="stat-top"><span>Total income</span><span class="stat-icon green">↗</span></div><strong id="totalIncome">₹0</strong><small class="positive">Money received this month</small></article>
+  <article class="stat-card"><div class="stat-top"><span>Total expenses</span><span class="stat-icon red">↘</span></div><strong id="totalExpenses">₹0</strong><small class="muted">Money spent this month</small></article>
+  <article class="stat-card"><div class="stat-top"><span>Monthly savings</span><span class="stat-icon blue">◈</span></div><strong id="monthlySavings">₹0</strong><small class="positive">Income minus expenses</small></article>
+  <article class="stat-card"><div class="stat-top"><span>Savings rate</span><span class="stat-icon purple">％</span></div><strong id="savingsRate">0%</strong><small class="muted">Of your total income</small></article>
+</div>
+<div class="dashboard-grid">
+  <article class="panel chart-panel wide-panel"><div class="panel-heading"><div><h3>Income vs expenses</h3><p>Monthly cash flow overview</p></div><span class="chart-legend"><i class="legend-income"></i>Income <i class="legend-expense"></i>Expenses</span></div><div class="chart-wrap"><canvas id="incomeExpenseChart"></canvas></div></article>
+  <article class="panel chart-panel"><div class="panel-heading"><div><h3>Expense breakdown</h3><p>Where your money goes</p></div><span class="more-button">···</span></div><div class="donut-area"><canvas id="expenseDonut"></canvas><div class="donut-center"><strong id="donutTotal">₹0</strong><small>Total spent</small></div></div><div class="category-legend" id="categoryLegend"></div></article>
+  <article class="panel chart-panel"><div class="panel-heading"><div><h3>Savings trend</h3><p>Your progress over time</p></div><span class="pill-soft">Last 6 months</span></div><div class="chart-wrap small-chart"><canvas id="savingsTrend"></canvas></div></article>
+  <article class="panel"><div class="panel-heading"><div><h3>Budget utilization</h3><p>Keep your spending on track</p></div><a href="/budgets" class="text-link">View all</a></div><div id="budgetPreview" class="budget-preview"></div></article>
+  <article class="panel table-panel full-row"><div class="panel-heading"><div><h3>Recent transactions</h3><p>Your latest money activity</p></div><a href="/transactions" class="text-link">View all transactions →</a></div><div class="table-scroll"><table><thead><tr><th>TRANSACTION</th><th>CATEGORY</th><th>DATE</th><th>AMOUNT</th><th>TYPE</th></tr></thead><tbody id="recentTransactions"></tbody></table></div></article>
+</div>
+{% endblock %}

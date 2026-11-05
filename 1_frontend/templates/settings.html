@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-heading"><div><h2>Settings</h2><p>Manage your PennyWise experience.</p></div><button class="btn btn-primary" id="saveSettings">Save changes</button></div>
+<div class="settings-layout"><section class="panel settings-panel"><div class="settings-title"><div class="settings-icon">♙</div><div><h3>Profile information</h3><p>Your personal account details</p></div></div><div class="settings-form"><label>Full name<input id="settingName" value="Veera Reddy"></label><label>Email address<input id="settingEmail" type="email" value="veera@example.com"></label></div><hr><div class="settings-title"><div class="settings-icon">₹</div><div><h3>Preferences</h3><p>Customize how amounts and dates appear</p></div></div><div class="settings-form"><label>Currency<select id="settingCurrency"><option value="INR">Indian Rupee (₹ INR)</option><option value="USD">US Dollar ($ USD)</option><option value="EUR">Euro (€ EUR)</option></select></label><label>Appearance<select id="settingTheme"><option value="light">Light theme</option><option value="dark">Dark theme (coming soon)</option></select></label></div><hr><div class="settings-title"><div class="settings-icon">♧</div><div><h3>Notifications</h3><p>Choose which updates you want to receive</p></div></div><div class="setting-toggle"><div><strong>Budget alerts</strong><small>Get notified when spending approaches a budget limit.</small></div><input type="checkbox" id="budgetAlerts" checked></div><div class="setting-toggle"><div><strong>Weekly summary</strong><small>Receive a weekly overview of your finances.</small></div><input type="checkbox" id="weeklySummary" checked></div></section>
+<aside class="panel settings-aside">
+  <div class="avatar avatar-large">VR</div>
+  <h3 id="profilePreview">Veera Reddy</h3>
+  <p>Personal account</p>
+  <div class="security-note">Your prototype data is stored in this browser using localStorage and synced with the active full-stack server.</div>
+  <button class="btn btn-light btn-block" id="resetDemo">Reset demo data</button>
+  <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); text-align: left;">
+    <strong style="display:block; margin-bottom: 12px; font-size: 13px; color: var(--text);">Export Separate ZIP Packages</strong>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <a href="/downloads/1_frontend.zip" class="btn btn-light btn-block" download style="text-decoration:none; text-align:center; font-size:12px; justify-content:center;">📦 1. Frontend ZIP</a>
+      <a href="/downloads/2_backend.zip" class="btn btn-light btn-block" download style="text-decoration:none; text-align:center; font-size:12px; justify-content:center;">⚙️ 2. Backend ZIP</a>
+      <a href="/downloads/3_database.zip" class="btn btn-light btn-block" download style="text-decoration:none; text-align:center; font-size:12px; justify-content:center;">🗄️ 3. Database ZIP</a>
+      <a href="/downloads/4_data_analysis.zip" class="btn btn-light btn-block" download style="text-decoration:none; text-align:center; font-size:12px; justify-content:center;">📊 4. Data Analysis ZIP</a>
+      <a href="/downloads/pennywise_all_files.zip" class="btn btn-primary btn-block" download style="text-decoration:none; text-align:center; font-size:12px; justify-content:center; margin-top:4px;">📁 All 4 ZIPs (Complete)</a>
+    </div>
+  </div>
+</aside></div>
+{% endblock %}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} · PennyWise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script>window.PENNYWISE_CONFIG = { apiMode: false };</script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="/">
+      <span class="brand-mark">P</span><span>PennyWise</span>
+    </a>
+    <div class="workspace-label">WORKSPACE</div>
+    <nav class="nav-list">
+      <a class="nav-link {% if page == 'dashboard' %}active{% endif %}" href="/"><span class="nav-icon">⌂</span>Dashboard</a>
+      <a class="nav-link {% if page == 'transactions' %}active{% endif %}" href="/transactions"><span class="nav-icon">↔</span>Transactions</a>
+      <a class="nav-link {% if page == 'budgets' %}active{% endif %}" href="/budgets"><span class="nav-icon">▤</span>Budgets</a>
+      <a class="nav-link {% if page == 'categories' %}active{% endif %}" href="/categories"><span class="nav-icon">◈</span>Categories</a>
+      <a class="nav-link {% if page == 'analytics' %}active{% endif %}" href="/analytics"><span class="nav-icon">▥</span>Analytics</a>
+      <a class="nav-link {% if page == 'goals' %}active{% endif %}" href="/goals"><span class="nav-icon">◎</span>Savings Goals</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <a class="nav-link {% if page == 'settings' %}active{% endif %}" href="/settings"><span class="nav-icon">⚙</span>Settings</a>
+      <div class="sidebar-help">
+        <div class="help-icon">✦</div>
+        <strong>Make your money work smarter.</strong>
+        <p>Small steps today create a stronger tomorrow.</p>
+        <a href="/downloads/pennywise_all_files.zip" class="text-link" download style="display:inline-block; margin-top:8px; font-size:11px; font-weight:600; color:#10B981;">⬇ Download All ZIPs</a>
+      </div>
+      <div class="profile-mini"><div class="avatar">VR</div><div><strong>Veera Reddy</strong><small>Personal account</small></div><span class="dots">···</span></div>
+    </div>
+  </aside>
+
+  <main class="main-area">
+    <header class="topbar">
+      <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+      <div class="topbar-title"><span class="eyebrow">PERSONAL FINANCE</span><h1>{{ title }}</h1></div>
+      <div class="topbar-actions">
+        <label class="search-box"><span>⌕</span><input id="globalSearch" type="search" placeholder="Search anything..."></label>
+        <button class="icon-button notification-button" aria-label="Notifications">♧<i></i></button>
+        <div class="top-profile"><div class="avatar">VR</div><div><strong>Veera Reddy</strong><small>Personal</small></div><span>⌄</span></div>
+      </div>
+    </header>
+    <section class="page-content">
+      {% block content %}{% endblock %}
+    </section>
+    <footer class="footer">© 2026 PennyWise <span>Plan thoughtfully. Spend wisely.</span></footer>
+  </main>
+</div>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head"><div><span class="eyebrow">PENNYWISE</span><h2 id="modalTitle">Add transaction</h2></div><button class="close-modal" id="closeModal">×</button></div>
+    <form id="transactionForm">
+      <input type="hidden" id="transactionId">
+      <div class="form-grid">
+        <label>Transaction type<select id="transactionType" required><option value="expense">Expense</option><option value="income">Income</option></select></label>
+        <label>Amount (₹)<input id="transactionAmount" type="number" min="0.01" step="0.01" placeholder="0.00" required></label>
+        <label>Date<input id="transactionDate" type="date" required></label>
+        <label>Category<select id="transactionCategory" required></select></label>
+        <label class="full-field">Description<input id="transactionDescription" maxlength="120" placeholder="What was this transaction for?"></label>
+      </div>
+      <div class="modal-actions"><button type="button" class="btn btn-light" id="cancelModal">Cancel</button><button class="btn btn-primary" type="submit">Save transaction</button></div>
+    </form>
+  </div>
+</div>
+<div class="toast-stack" id="toastStack" aria-live="polite"></div>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

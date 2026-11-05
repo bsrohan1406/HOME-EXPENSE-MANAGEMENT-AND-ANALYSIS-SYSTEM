@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-heading"><div><h2>Savings goals</h2><p>Turn your plans into progress, one deposit at a time.</p></div><button class="btn btn-primary" id="addGoal">＋ Create a goal</button></div>
+<div class="goal-summary panel"><div><span class="muted">Total saved toward goals</span><strong id="goalTotalSaved">₹0</strong></div><div><span class="muted">Total target</span><strong id="goalTotalTarget">₹0</strong></div><div><span class="muted">Active goals</span><strong id="goalCount">0</strong></div></div>
+<div class="goal-grid" id="goalCards"></div>
+<div class="modal-backdrop" id="goalModal"><div class="modal"><div class="modal-head"><div><span class="eyebrow">FUTURE YOU WILL THANK YOU</span><h2 id="goalModalTitle">Create savings goal</h2></div><button class="close-modal" data-close-goal>×</button></div><form id="goalForm"><input type="hidden" id="goalId"><div class="form-grid"><label class="full-field">Goal name<input id="goalName" required maxlength="60" placeholder="e.g. Emergency fund"></label><label>Target amount (₹)<input id="goalTarget" type="number" min="1" required></label><label>Current savings (₹)<input id="goalCurrent" type="number" min="0" value="0" required></label></div><div class="modal-actions"><button type="button" class="btn btn-light" data-close-goal>Cancel</button><button class="btn btn-primary">Save goal</button></div></form></div></div>
+{% endblock %}

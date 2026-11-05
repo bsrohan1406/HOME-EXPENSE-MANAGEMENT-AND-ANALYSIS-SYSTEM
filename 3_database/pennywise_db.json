@@ -1,0 +1,316 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Groceries",
+      "type": "Expense",
+      "color": "#EF4444"
+    },
+    {
+      "id": 2,
+      "name": "Rent",
+      "type": "Expense",
+      "color": "#F59E0B"
+    },
+    {
+      "id": 3,
+      "name": "Transportation",
+      "type": "Expense",
+      "color": "#3B82F6"
+    },
+    {
+      "id": 4,
+      "name": "Healthcare",
+      "type": "Expense",
+      "color": "#EC4899"
+    },
+    {
+      "id": 5,
+      "name": "Education",
+      "type": "Expense",
+      "color": "#8B5CF6"
+    },
+    {
+      "id": 6,
+      "name": "Entertainment",
+      "type": "Expense",
+      "color": "#10B981"
+    },
+    {
+      "id": 7,
+      "name": "Utilities",
+      "type": "Expense",
+      "color": "#6366F1"
+    },
+    {
+      "id": 8,
+      "name": "Shopping",
+      "type": "Expense",
+      "color": "#14B8A6"
+    },
+    {
+      "id": 9,
+      "name": "Salary",
+      "type": "Income",
+      "color": "#059669"
+    },
+    {
+      "id": 10,
+      "name": "Freelance",
+      "type": "Income",
+      "color": "#0D9488"
+    },
+    {
+      "id": 11,
+      "name": "Other Income",
+      "type": "Income",
+      "color": "#0284C7"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "type": "Income",
+      "amount": 75000,
+      "transaction_date": "2026-10-01",
+      "category_id": 9,
+      "description": "Monthly Software Engineer Salary"
+    },
+    {
+      "id": 2,
+      "type": "Income",
+      "amount": 15000,
+      "transaction_date": "2026-10-15",
+      "category_id": 10,
+      "description": "Freelance UI Design"
+    },
+    {
+      "id": 3,
+      "type": "Expense",
+      "amount": 18000,
+      "transaction_date": "2026-10-02",
+      "category_id": 2,
+      "description": "Monthly Apartment Rent"
+    },
+    {
+      "id": 4,
+      "type": "Expense",
+      "amount": 5600,
+      "transaction_date": "2026-10-05",
+      "category_id": 1,
+      "description": "Supermarket Groceries"
+    },
+    {
+      "id": 5,
+      "type": "Expense",
+      "amount": 1800,
+      "transaction_date": "2026-10-09",
+      "category_id": 3,
+      "description": "Fuel & Metro Recharge"
+    },
+    {
+      "id": 6,
+      "type": "Expense",
+      "amount": 2400,
+      "transaction_date": "2026-10-12",
+      "category_id": 7,
+      "description": "High-speed Fiber & Electricity"
+    },
+    {
+      "id": 7,
+      "type": "Expense",
+      "amount": 1650,
+      "transaction_date": "2026-10-18",
+      "category_id": 6,
+      "description": "Weekend Cinema & Dinner"
+    },
+    {
+      "id": 8,
+      "type": "Expense",
+      "amount": 3200,
+      "transaction_date": "2026-10-22",
+      "category_id": 8,
+      "description": "New Running Shoes"
+    },
+    {
+      "id": 9,
+      "type": "Income",
+      "amount": 80000,
+      "transaction_date": "2026-11-01",
+      "category_id": 9,
+      "description": "Monthly Software Engineer Salary"
+    },
+    {
+      "id": 10,
+      "type": "Income",
+      "amount": 12000,
+      "transaction_date": "2026-11-04",
+      "category_id": 10,
+      "description": "Client Code Review & Consulting"
+    },
+    {
+      "id": 11,
+      "type": "Expense",
+      "amount": 18000,
+      "transaction_date": "2026-11-02",
+      "category_id": 2,
+      "description": "Apartment Rent"
+    },
+    {
+      "id": 12,
+      "type": "Expense",
+      "amount": 4850,
+      "transaction_date": "2026-11-03",
+      "category_id": 1,
+      "description": "Organic Market & Groceries"
+    },
+    {
+      "id": 13,
+      "type": "Expense",
+      "amount": 1600,
+      "transaction_date": "2026-11-06",
+      "category_id": 3,
+      "description": "Monthly Transit Pass"
+    },
+    {
+      "id": 14,
+      "type": "Expense",
+      "amount": 2650,
+      "transaction_date": "2026-11-08",
+      "category_id": 7,
+      "description": "Electricity & Water Bill"
+    },
+    {
+      "id": 15,
+      "type": "Expense",
+      "amount": 1200,
+      "transaction_date": "2026-11-10",
+      "category_id": 6,
+      "description": "Concert Ticket"
+    },
+    {
+      "id": 16,
+      "type": "Expense",
+      "amount": 3500,
+      "transaction_date": "2026-11-12",
+      "category_id": 4,
+      "description": "Annual Health Checkup"
+    },
+    {
+      "id": 17,
+      "type": "Expense",
+      "amount": 4200,
+      "transaction_date": "2026-11-15",
+      "category_id": 8,
+      "description": "Electronics & Audio Gear"
+    },
+    {
+      "id": 18,
+      "type": "Expense",
+      "amount": 2500,
+      "transaction_date": "2026-11-02",
+      "category_id": 1,
+      "description": "Supermarket Fresh Produce"
+    }
+  ],
+  "budgets": [
+    {
+      "id": 1,
+      "category_id": 1,
+      "month": "2026-10",
+      "amount": 6500
+    },
+    {
+      "id": 2,
+      "category_id": 2,
+      "month": "2026-10",
+      "amount": 18000
+    },
+    {
+      "id": 3,
+      "category_id": 3,
+      "month": "2026-10",
+      "amount": 2500
+    },
+    {
+      "id": 4,
+      "category_id": 7,
+      "month": "2026-10",
+      "amount": 3000
+    },
+    {
+      "id": 5,
+      "category_id": 8,
+      "month": "2026-10",
+      "amount": 4000
+    },
+    {
+      "id": 6,
+      "category_id": 1,
+      "month": "2026-11",
+      "amount": 6000
+    },
+    {
+      "id": 7,
+      "category_id": 2,
+      "month": "2026-11",
+      "amount": 18000
+    },
+    {
+      "id": 8,
+      "category_id": 3,
+      "month": "2026-11",
+      "amount": 2500
+    },
+    {
+      "id": 9,
+      "category_id": 4,
+      "month": "2026-11",
+      "amount": 4000
+    },
+    {
+      "id": 10,
+      "category_id": 6,
+      "month": "2026-11",
+      "amount": 2000
+    },
+    {
+      "id": 11,
+      "category_id": 7,
+      "month": "2026-11",
+      "amount": 3000
+    },
+    {
+      "id": 12,
+      "category_id": 8,
+      "month": "2026-11",
+      "amount": 3500
+    }
+  ],
+  "goals": [
+    {
+      "id": 1,
+      "name": "Emergency Fund (6 Months)",
+      "target_amount": 150000,
+      "current_amount": 85000
+    },
+    {
+      "id": 2,
+      "name": "New M4 MacBook Pro",
+      "target_amount": 120000,
+      "current_amount": 72000
+    },
+    {
+      "id": 3,
+      "name": "Summer Vacation Trip",
+      "target_amount": 60000,
+      "current_amount": 24500
+    }
+  ],
+  "settings": {
+    "currency": "INR",
+    "profileName": "Veera Reddy",
+    "profileEmail": "veera.reddy@pennywise.finance",
+    "budgetAlertThreshold": 85
+  }
+}

@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-heading"><div><h2>Categories</h2><p>Organize your income and expenses your way.</p></div><button class="btn btn-primary" id="addCategory">＋ Add category</button></div>
+<div class="panel filters-panel"><div class="filter-search">⌕ <input id="categorySearch" placeholder="Search categories..."></div><select id="categoryTypeFilter"><option value="all">All categories</option><option value="expense">Expense</option><option value="income">Income</option></select></div>
+<div class="category-grid" id="categoryCards"></div>
+<div class="modal-backdrop" id="categoryModal"><div class="modal"><div class="modal-head"><div><span class="eyebrow">CATEGORY SETTINGS</span><h2 id="categoryModalTitle">Add category</h2></div><button class="close-modal" data-close-category>×</button></div><form id="categoryForm"><input type="hidden" id="categoryId"><div class="form-grid"><label>Category name<input id="categoryName" maxlength="40" required></label><label>Category type<select id="categoryType"><option value="expense">Expense</option><option value="income">Income</option></select></label></div><div class="modal-actions"><button type="button" class="btn btn-light" data-close-category>Cancel</button><button class="btn btn-primary">Save category</button></div></form></div></div>
+{% endblock %}

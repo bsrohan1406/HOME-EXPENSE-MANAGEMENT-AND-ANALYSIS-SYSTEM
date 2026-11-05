@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-heading"><div><h2>Monthly budgets</h2><p>Give every rupee a purpose and stay in control.</p></div><div class="heading-actions"><input type="month" class="month-input" id="budgetMonth"><button class="btn btn-primary" id="addBudget">＋ Create budget</button></div></div>
+<div class="stat-grid compact-stats"><article class="stat-card"><span class="muted">Total planned</span><strong id="plannedTotal">₹0</strong></article><article class="stat-card"><span class="muted">Total spent</span><strong id="spentTotal">₹0</strong></article><article class="stat-card"><span class="muted">Budget remaining</span><strong id="remainingTotal">₹0</strong></article></div>
+<div class="budget-grid" id="budgetCards"></div>
+<div class="modal-backdrop" id="budgetModal"><div class="modal"><div class="modal-head"><div><span class="eyebrow">BUDGET PLANNER</span><h2 id="budgetModalTitle">Create budget</h2></div><button class="close-modal" data-close-budget>×</button></div><form id="budgetForm"><input type="hidden" id="budgetId"><div class="form-grid"><label>Category<select id="budgetCategory" required></select></label><label>Monthly limit (₹)<input id="budgetAmount" type="number" min="1" step=".01" required></label></div><div class="modal-actions"><button type="button" class="btn btn-light" data-close-budget>Cancel</button><button class="btn btn-primary">Save budget</button></div></form></div></div>
+{% endblock %}
